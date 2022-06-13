@@ -1,23 +1,43 @@
-body {
+* {
     margin: 0; 
     padding: 0;
     font-family: sans-serif;
 }
 
 .top{
-    background-image: url(img/top_background.png);
+    min-height: 768px;
+    background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);  
     margin-bottom: 64px;
 }
 
 .container { 
-    width: 1140px; 
+    max-width: 1140px; 
     margin: 0 auto; 
+}
+
+.top_box{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .head_menu{
     display: flex;
     justify-content: space-between;
     List-style-type: none;
+    padding-top: 42px;
+}
+
+.header{
+    min-height: 500px;
+    padding-top: 115px;
+    flex-grow: 1;
+    background-image: URL(img/top_img.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 44%;
+    margin-bottom: 60px;
+
 }
 
 .paragraph{
@@ -34,17 +54,6 @@ body {
     line-height: 74px;
     letter-spacing: 0.04em;
     color: #1F3F68;    
-}
-
-.header{
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.header_img{
-    margin-bottom: 60px;
-
 }
 
 .p_header{
@@ -65,7 +74,7 @@ body {
 }
 
 .welcome_info_detail{
-    min-width: 359px;
+    width: 359px;
     padding: 44px 32px;
     box-sizing: border-box;
     background-color: #FFFFFF;
@@ -76,13 +85,14 @@ body {
 }
 
 .welcome_h3{
-    width: 1137px;
     font-weight: 300;
     font-size: 36px;
     line-height: 46px;
     text-align: center;
     letter-spacing: 0.05em;
     color: #000000;
+    margin-right: 32px 0px;
+    
 }
 
 .head_two_contacts{
@@ -91,13 +101,13 @@ body {
     text-align: center;
 }
 .head_three{
-    width: 1140px;
     font-weight: 300;
     font-size: 36px;
     line-height: 46px;
     text-align: center;
     letter-spacing: 0.05em;
     color: #000000;
+    margin-right: 32px 0px;
 }
 
 .finish_project_descpription{   
@@ -163,12 +173,12 @@ body {
 }
 
 .head_four{   
-    width: 283px;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0.05em;
     color: #1F3F68;
+    margin-bottom: 14px;
 }
 
 .p_learn_more{
@@ -193,7 +203,6 @@ body {
 }
 
 .p_prod{
-    width: 268.31px;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -250,7 +259,7 @@ body {
 }
 
 .h3_footer{
-    width: 340px;
+    min-width: 340px;
     font-weight: 300;
     font-size: 36px;
     line-height: 46px;
@@ -261,8 +270,12 @@ body {
 }
 
 .overline_footer_text{
-    width: 495px;
+    min-width: 495px;
     color: #FFFFFF;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    opacity: 0.6;
 }
 
 .footer_bottom{
@@ -298,11 +311,198 @@ hr{
 
 }
 
-.all_rights_reserved{
+.all_rights_reserved_text{
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
     opacity: 0.4;
+    margin-top: 64px;
+}
+
+.all_rights_reserved{
+    margin-top: 64px;
+}
+
+@media (max-width:1024px){
+    .container{
+        padding-left: 32px;
+        padding-right:  32px;
+    }
+
+    .header{
+        padding-top: 36px;
+        background-position: right 280px;
+    }
+
+    .welcome_info{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome_info_detail{
+        margin-bottom: 32px;
+        min-width: 335px;
+    }
+
+    .footer{
+        padding-top: 48px;
+    }
+
+    .footer_bottom{
+        padding: 4px 31px;
+    }
+    .overline_footer{
+        align-items: left;
+        justify-content: left;
+        margin-left: 124px;
+    }
+
+    .overline_footer_text{
+        max-width: 336px;
+        margin-right: 51px;
+    }
+
+    .footer_contacts{
+        flex-direction: column;
+        margin-left: 124px;
+    }
+}
+
+@media (max-width:667px){
+    .top{
+        min-height: 376px;
+        padding-bottom: 41px;
+        box-sizing: border-box;
+    }
+    
+    .head-menu{
+        padding-top: 24px;
+    }
+
+    .header{
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+        margin-bottom: 0px;
+        padding-top: 36px;
+    }
+    
+    .head_one{
+        width: 100%;
+        font-size: 32px;
+        line-height: 37px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .p_header{
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn_detail{
+        min-width: 108px;
+        min-height: 27px;
+        font-size: 12px;
+        line-height: 26px;
+    }
+
+    .welcome_h3, .head_three{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .welcome_info{
+        padding-top: 0px;
+        padding-bottom: 32px;
+    }
+
+    .welcome_info_detail{
+        width: 100%;
+        margin-bottom: 32px;
+        margin-top: 32px;
+    }
+
+    .hot_news_text{
+        font-size: 16px;
+        line-height: 19px;
+        top: 16px;
+        right: 16px;
+    }
+
+    .hot_news_parent{
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .hot_news_text_bottom{
+        left: 16px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .hot_news_item_margin{
+        margin-right: 0px;
+        margin-bottom: 16px;
+    }
+
+    .footer{
+        padding-top: 18px;
+        padding-bottom: 32px;
+    }
+    
+    .overline_footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 16px;
+        padding-bottom: 0px;
+    }
+
+    .overline_footer_info{
+        margin: 0px 16px;
+    }
+    .h3_footer{
+        min-width: 340px;
+        text-align: center;
+    }
+
+    .overline_footer_text{        
+        max-width: none;
+        min-width: 300px;
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .footer_bottom{
+        padding: 4px 8px;
+        margin: 40px 0px;
+    }
+    
+    .footer_contacts{
+        flex-direction: column;
+        margin-top: 32px;
+        margin-left: 56px;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    
+    .footer_list{
+        margin-bottom: 17px;
+    }
+
+    .all_rights_reserved{
+       margin: 0px 16px;
+    }
+
+    .all_rights_reserved_text{
+        text-align: center;
+        margin-top: 0;
+    }
 }
